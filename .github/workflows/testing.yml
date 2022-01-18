@@ -3,10 +3,9 @@ name: Testing
 on:
   pull_request:
     paths:
-      - ".github/**"
       - "__test__/**"
-      - "pages/api/v1/**"
-      - "lib/middleware/**"
+      - "src/pages/api/v1/**"
+      - "src/lib/middleware.ts"
 jobs:
   main:
     name: Test with Jest
@@ -19,4 +18,4 @@ jobs:
         run: npm ci
 
       - name: Run jest tests
-        run: npm run test
+        run: npx jest ----passWithNoTests
