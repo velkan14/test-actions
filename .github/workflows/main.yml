@@ -2,11 +2,9 @@ name: CI
 
 on:
   pull_request:
-
-  workflow_dispatch:
-
 jobs:
-  build:
+  main:
+    name: Typecheck and lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
