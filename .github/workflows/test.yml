@@ -1,4 +1,4 @@
-name: CI
+name: Testing
 
 on:
   pull_request:
@@ -19,4 +19,4 @@ jobs:
         run: npm ci
 
       - name: Test api
-        run: npx jest
+        run: npm run test
